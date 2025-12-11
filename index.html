@@ -9,20 +9,40 @@
             background-color: azure;
         }
 
-        button{
+        .btn{
             background-color: rgb(162, 231, 231);
+            border-radius: 10px;
+            border-color: rgb(21, 174, 174);
+            padding: 5px;
+            margin: 5px;
+            transition: 0.5s;
+        }
+
+        .baslik{
+            color:rgb(29, 68, 239);
+            text-align: justify;
+        }
+
+      .btn:hover {
+            background-color: #038185;
+        }
+        .kutu{
+            display: grid;
+            place-items: center;
         }
     </style>
 </head>
 <body>
-    <h1>Weather App (Open Meteo)</h1>
+    <div class="kutu">
+    <h1 class="baslik">Weather App (Open Meteo)</h1>
 
     <label>Şehir adı:</label>
     <input id="city" placeholder="İstanbul">
-    <button onclick="getWeather()">Getir</button>
+    <button onclick="getWeather()" class="btn">Getir</button>
 
     <pre id="result"></pre>
 
     <script src="script.js"></script>
+    </div>
 </body>
 </html>
